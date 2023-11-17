@@ -1,0 +1,9 @@
+#!/bin/bash
+
+path="./..."
+if [ "$1]" != "" ] ; then
+  path=$1
+fi
+
+echo running in $path
+golangci-lint run ${path} --config /root/user/.golangci.yaml
